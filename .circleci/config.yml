@@ -4,9 +4,11 @@ orbs:
 
 jobs:
   build:
+    context: tango
     docker:
       - image: 'circleci/node'
     steps:
+    
       - checkout
       - aws-s3/sync:
           from: .
@@ -21,4 +23,3 @@ jobs:
             --exclude ".gitignore" \
             --exclude ".circleci/*" \
           overwrite: true
-          
