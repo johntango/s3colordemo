@@ -4,7 +4,6 @@ orbs:
 
 jobs:
   build:
-    context: 'tango'
     docker:
       - image: 'circleci/node'
     steps:
